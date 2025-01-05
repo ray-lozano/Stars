@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
-class Star:
+class Star(Sprite):
     """Class to represent a single star in the sky."""
 
     def __init__(self, star_game):
