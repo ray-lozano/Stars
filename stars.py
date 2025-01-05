@@ -42,7 +42,7 @@ class Stars:
         
         # Set the current x and y to the star's width and height
         current_x, current_y = star_width, star_height
-        
+
         # Loop to create the rows of stars.
         # Setting the width and height between stars to be the width and height of a star.
         # The current x and y values will be the positions of where the next star will go.
