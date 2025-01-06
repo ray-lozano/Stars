@@ -1,4 +1,5 @@
 import pygame
+from random import randint
 from settings import Settings
 from star import Star
 import sys
@@ -48,10 +49,11 @@ class Stars:
         # The current x and y values will be the positions of where the next star will go.
         while current_y < (self.settings.screen_height - 3 * star_height):
             while current_x < (self.settings.screen_width - 2 * star_width):
+                random_number = randint(-10, 10)
                 # Create a star at the current x and y position
-                self._create_star(current_x, current_y)
+                self._create_star(current_x * random_number / 2, current_y * random_number)
                 current_x += 2 * star_width     # Leaves space between the previous and current x value exactly one star size.
-            
+
             # Once a row is finished, reset the x value to the beginning of the row,
             # and increment the y value to start the new row.
             current_x = star_width
